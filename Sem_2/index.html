@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Дан код
+    Необходимо с помощью querySelector найти параграф с классом text
+    Вывести в консоль соседний элемент h2
+    Вывести в консоль родительский элемент content
+    Вывести в консоль картинку
+    Вывести в консоль родительский элемент elem -->
+
+    <!-- <div class="elem">
+      <img src="photo.png" alt="photo" />
+      <div class="content">
+        <h2 class="heading">Lorem, ipsum dolor.</h2>
+        <p class="text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae,
+          ea!
+        </p>
+      </div>
+    </div> -->
+    <!-- С помощью querySelector найти элемент h2  и вывести в консоль всех его родителей -->
+    <!-- 
+    <div class="item">
+      <div class="elem">
+        <div class="info">
+          <h2 class="subtitle">Lorem, ipsum dolor.</h2>
+        </div>
+      </div>
+    </div> -->
+    <!-- Дано поле ввода и кнопка отправить, необходим реализовать функционал, если пользователь нажимает на кнопку отправить, а поле ввода пустое, то под полем ввода и кнопкой должен появиться заголовок h2 с текстом вы не заполнили поле ввода
+    Цвет у рамки сделать красным -->
+
+    <form onsubmit="funcSend()" action="#">
+      <input type="text" />
+      <button class="btn">Отправить</button>
+    </form>
+
+    <script>
+      const btnElement = document.querySelector(".btn");
+      const inputElement = document.querySelector("input");
+      const formElement = document.querySelector("form");
+
+      function funcSend() {
+        const h2Element = document.createElement("h2");
+
+        if (inputElement.value.trim() === "") {
+          h2Element.textContent = "вы не заполнили поле ввода";
+          inputElement.style.border = "1px solid red";
+        } else {
+          h2Element.textContent = "все ОК";
+          inputElement.style.border = "1px solid green";
+        }
+        h2Element.style.width = "600px";
+        formElement.appendChild(h2Element);
+        setTimeout(() => {
+          h2Element.remove();
+        }, 1000);
+      }
+
+      // <div class="block"></div>
+      // const blockElement = document.querySelector(".block");
+      // const divElement = document.createElement("div");
+      // // divElement.classList.add('item');
+      // divElement.className = 'item';
+      // // console.log(divElement);
+      // divElement.textContent = 'Элемент внутри';
+      // blockElement.appendChild(divElement);
+      // divElement.style.color = 'blue';
+      // divElement.style.border = '1px solid black';
+      // divElement.style.backgroundColor = '#f8f8f8';
+      // divElement.style.padding = '16px';
+      // divElement.setAttribute('class', 'item item_1');
+
+      // const textElement = document.querySelector("p");
+      // console.dir(textElement);
+      // console.log(textElement.previousElementSibling);
+      // console.log(textElement.parentNode);
+      // console.log(textElement.parentElement);
+      // const imgElement = document.querySelector("img");
+      // console.log(imgElement);
+      // const elemElement = document.querySelector(".elem");
+      // console.log(textElement.closest('div.elem'));
+
+      // const h2Element = document.querySelector("h2");
+      // const arrayParents = [];
+      // let h2ParentFirst = h2Element.parentElement;
+      // while (h2ParentFirst !== document.body) {
+      //   arrayParents.push(h2ParentFirst);
+      //   h2ParentFirst = h2ParentFirst.parentElement;
+      // }
+      // console.log(arrayParents);
+    </script>
+  </body>
+</html>
