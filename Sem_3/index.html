@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="list">
+      <li class="element">element 1</li>
+      <li class="element">element 2</li>
+      <li class="element">element 3</li>
+    </ul>
+    <div class="buttons">
+      <button class="but">button_1</button>
+      <button class="but">button_2</button>
+      <button class="but">button_3</button>
+    </div>
+
+    <div class="workspace"></div>
+    <div class="content"></div>
+    <!-- В html создать кнопку button
+После загрузки страницы вывести в консоль текст “страница загрузилась”
+Добавить событие onclick которое выводит в консоль текст “событие onclick”
+Добавить событие addEventListener которое выводит в консоль текст “событие addEventListener” -->
+    <script>
+      // const buttonElement = document.createElement("button");
+      // buttonElement.textContent = "Кнопка";
+      // const workElement = document.querySelector(".workspace");
+      // workElement.appendChild(buttonElement);
+
+      // window.onload = () => {
+      //   console.log("“страница загрузилась”");
+      // };
+
+      // buttonElement.onclick = (e) => {
+      //   console.log("событие onclick");
+      // };
+
+      // const listener = () => {
+      //   console.log('событие addEventListener!!!');
+      // }
+
+      // buttonElement.addEventListener('click', listener);
+
+      //       Создать в html три кнопки button с нумерацией (1, 2, 3 соответственно)
+      // Добавить клик на кнопку , чтобы в консоль выводилась именно та кнопка на которую мы нажали
+      // const buttonElements = document.querySelectorAll(".but");
+      // buttonElements.forEach((element) => {
+      //   const pushing = () => {
+      //     console.log(element);
+      //   };
+      //   element.addEventListener("click", pushing);
+      // });
+
+      // Добавить кнопку button с текстом 4, которая считает сколько раз на нее нажали и количество нажатий на эту кнопку выводит в консоль
+      // const button4Element = document.createElement("button");
+      // button4Element.textContent = "4";
+      // const arrayButtonsElem = document.querySelector(".buttons");
+      // arrayButtonsElem.appendChild(button4Element);
+      // let counter = 0;
+
+      // const countFunc = () => {
+      //   counter++;
+      //   console.log(counter);
+      // };
+      // button4Element.addEventListener("click", countFunc);
+
+      // Создать кнопку button с текстом 5, При клике на которую, меняется текст данной кнопки на “Вы нажали на эту кнопку”
+
+      // const button5Eleme = document.createElement("button");
+      // button5Eleme.textContent = "5";
+      // arrayButtonsElem.appendChild(button5Eleme);
+
+      // const changeButtonName = () => {
+      //   if (button5Eleme.textContent === '5'){
+      //     button5Eleme.textContent = 'Вы нажали на эту кнопку';
+      //   } else {
+      //     button5Eleme.textContent = '5';
+      //   }
+
+      // }
+
+      // button5Eleme.addEventListener('click', changeButtonName);
+
+      //       Создать кнопку, которая добавляет заголовок h1 с текстом, “Новый заголовок, данный элемент нужно расположить после кнопки
+
+      // const butElement = document.createElement("button");
+      // butElement.textContent = "NZ";
+      // const buttons = document.querySelector(".buttons");
+      // buttons.appendChild(butElement);
+      // const h1Function = () => {
+      //   const h1Element = document.createElement("h1");
+      //   h1Element.textContent = "Новый заголовок";
+      //   butElement.insertAdjacentElement('afterend', h1Element );
+      // };
+
+      // butElement.addEventListener("click", h1Function);
+
+      // Создать вторую кнопку, которая будет удалять созданный заголовок h1
+      // const butElementDel = document.createElement("button");
+      // butElementDel.textContent = "Delete H1";
+      // buttons.appendChild(butElementDel);
+      // const h1FunctionDel = () => {
+      //   const h1Element = document.querySelector("h1");
+      //   h1Element.remove();
+      //   console.log('Element was deleted');
+      // };
+
+      // butElementDel.addEventListener("click", h1FunctionDel);
+
+      // Создать третью кнопку, при наведении на которую в консоль будет выводиться текст “вы навели на данную кнопку” , как только вы убираем курсор мыши с кнопки, в консоли должен появиться текст “Наведения на кнопку больше нет”
+      // const butElementHover = document.createElement("button");
+      // butElementHover.textContent = "Hover";
+      // buttons.appendChild(butElementHover);
+      // const h1FunctionHover = () => {
+      //   console.log('Element was hovered');
+      // };
+      // const h1FunctionOut = () => {
+      //   console.log('Element went OUT');
+      // };
+
+      // butElementHover.addEventListener("mouseover", h1FunctionHover);
+      // butElementHover.addEventListener("mouseout", h1FunctionOut);
+
+      //       Создать в html список состоящий из 3-х произвольных элементов li
+      // Нужно создать кнопку которая будет добавлять элементы списка с текстом “новый элемент списка”
+      // const addElement = document.createElement("button");
+      // addElement.textContent = "Add element";
+      // document.body.appendChild(addElement);
+      // const listElement = document.querySelector(".list");
+      // const newElemFunction = () => {
+      //   const newElem = document.createElement("li");
+      //   newElem.textContent = "новый элемент списка";
+      //   newElem.className = "element";
+      //   listElement.appendChild(newElem);
+      // };
+      // addElement.addEventListener("click", newElemFunction);
+
+      // Создать кнопку, которая будет удалять первый элемент из созданного списка
+      // const delFirstButtonElem = document.createElement("button");
+      // delFirstButtonElem.textContent = "DeleteFirstElement of LIST";
+      // document.body.appendChild(delFirstButtonElem);
+      // const delFirstFunction = () => {
+      //   listElement.firstElementChild.remove();
+      // };
+      // delFirstButtonElem.addEventListener("click", delFirstFunction);
+
+      // Создать кнопку, при клике на которую ей добавляется класс “click”
+      // const clickElement = document.createElement("button");
+      // clickElement.textContent = "add class CLICK";
+      // document.body.appendChild(clickElement);
+      // const clickFunction = () => {
+      //   clickElement.setAttribute("class", "click");
+      // };
+      // clickElement.addEventListener("click", clickFunction);
+
+      //       Дан тег <div class="content"></div>
+      // Создайте с помощью javascript новый элемент button
+      // Добавьте текст для кнопки “Отправить”
+      // При клике на данную кнопку необходимо чтобы текст поменялся на “Текст отправлен”
+      const buttonElement = document.createElement("button");
+      buttonElement.textContent = "Отправить";
+      const contentElement = document.querySelector(".content");
+      contentElement.appendChild(buttonElement);
+
+      const changeTextFunc = () => {
+        buttonElement.textContent = 'Текст отправлен';
+      }
+
+      buttonElement.addEventListener('click', changeTextFunc);
+
+
+
+    </script>
+  </body>
+</html>
