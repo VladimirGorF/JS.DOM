@@ -9,7 +9,7 @@
     <p class="dropdown">Привет</p>
     <div class="dropdown">
       <button
-        class="btn btn-secondary dropdown-toggle"
+        class="btn dropdown-toggle"
         type="button"
         id="dropdownMenuButton"
         data-toggle="dropdown"
@@ -36,11 +36,7 @@
 
       // 2. У элемента с классом btn необходимо убрать класс "btn-secondary", если он присутствует у этого элемента, либо добавить, если такого класса у элемента не было.
       const btnElement = document.querySelector(".btn");
-      if (btnElement.classList.contains("btn-secondary")) {
-        btnElement.classList.remove("btn-secondary");
-      } else {
-        btnElement.classList.add("btn-secondary");
-      }
+      btnElement.classList.toggle('btn-secondary');
 
       // 3. Необходимо удалить класс "dropdown-menu" у элемента, у которого присутствует класс "menu".
       const menuElement = document.querySelector(".menu");
