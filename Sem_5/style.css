@@ -1,0 +1,87 @@
+@keyframes pulsate-bck {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.header {
+    color: blueviolet;
+    background-color: beige;
+    width: 500px;
+    height: 50px;
+    border: 1px dotted black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.5s;
+}
+
+.header:hover {
+    transform: scale(1.2);
+}
+
+.contentBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.element {
+    margin: 5px;
+    width: 200px;
+    border: 1px solid black;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: bisque;
+    padding: 5px;
+    box-shadow: 5px 5px 5px 5px rgb(0, 0, 0, 0.23);
+    transition: 0.8s;
+}
+
+.element:hover {
+    transform: rotateZ(90deg);
+}
+
+.image {
+    width: 200px;
+}
+
+.byBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    background-color: red;
+    color: aliceblue;
+    border: 1px double black;
+}
+
+.button {
+    height: 25px;
+    background-color: green;
+    color: aliceblue;
+}
+
+.pulsate-bck {
+    animation: pulsate-bck 0.5s ease-in-out infinite both;
+}
