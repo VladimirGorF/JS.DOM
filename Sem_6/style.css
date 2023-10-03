@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.cards {
+  margin-top: 319px;
+  margin-bottom: 777px;
+}
+.cards__item {
+  display: flex;
+  width: 652px;
+  height: 306px;
+  border: 1px solid;
+}
+.cards__xButton {
+  height: 22px;
+  display: flex;
+  margin-top: 28px;
+  margin-right: 22px;
+  border: none;
+  background-color: white;
+}
+.cards__desc {
+  padding: 22px 57px 62px 31px;
+}
+.cards__heading {
+  color: #222;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 42px;
+  width: 262px;
+  height: 58px;
+}
+.cards__txt {
+  color: #575757;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+.cards__txt span {
+  color: red;
+}
+.cards__txt .quantity {
+  width: 44px;
+  text-align: center;
+  color: #656565;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 24px;
+}
