@@ -1,0 +1,35 @@
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+  box-sizing: border-box;
+}
+
+.video-box {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+}
+
+.video-range {
+  width: 500px;
+}
+
+.fa-circle-pause {
+  margin-right: 80px;
+}
+
+.displayOff {
+  display: none;
+}
+
+.onOff {
+  margin-right: 100px;
+  width: 50px;
+}

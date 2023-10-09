@@ -41,12 +41,14 @@
 
 // fetchData();
 
-fetch("data.json")
-  .then((response) => response.json())
-  .then((data) => {
-    const cardsDiv = document.querySelector(".cards");
-    data.forEach(({ image, card_name, price, color, size, quantity, max }) => {
-      const productElem = ` 
+try {
+  fetch("data.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const cardsDiv = document.querySelector(".cards");
+      data.forEach(
+        ({ image, card_name, price, color, size, quantity, max }) => {
+          const productElem = ` 
             <div class="container">
              <div class="cards__item">
               <img class="cards__image" src="${image}" alt="${card_name}" />
@@ -62,15 +64,17 @@ fetch("data.json")
               <button class ="cards__xButton"><img src="images/Vector.svg" alt="X"></button>
              </div>
             </div> `;
-    
-      cardsDiv.insertAdjacentHTML("beforeend", productElem);
-    });
-    const closArr = document.querySelectorAll(".cards__xButton");
-    closArr.forEach((elem) => {
-      elem.addEventListener("click", function () {
-        elem.closest(".container").remove();
+
+          cardsDiv.insertAdjacentHTML("beforeend", productElem);
+        }
+      );
+      const closArr = document.querySelectorAll(".cards__xButton");
+      closArr.forEach((elem) => {
+        elem.addEventListener("click", function () {
+          elem.closest(".container").remove();
+        });
       });
     });
-  });
-
-
+} catch (error) {
+  console.log(error);
+}
