@@ -7,7 +7,26 @@
   "size": "XL",
   "quantity": 2,
   "max": "10"
+},
+{
+  "image": "images/image2.svg",
+  "card_name": "Красная футболка",
+  "price": "900",
+  "color": "Green",
+  "size": "XXL",
+  "quantity": 2,
+  "max": "20"
+},
+{
+  "image": "images/image3.jpg",
+  "card_name": "MANGO PEOPLE T-SHIRT",
+  "price": "300",
+  "color": "Red",
+  "size": "XL",
+  "quantity": 2,
+  "max": "10"
 }
+
 ]
 
 
